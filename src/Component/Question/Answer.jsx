@@ -19,7 +19,7 @@ const Answer = () => {
            <div>
               <h3><span className='question'> Question:</span>What can useEffect do ?</h3>
               <p><span className='answer'>Answer:</span>
-                 <ol>
+                 <ol className='list'>
                      <li> Using Hooks</li>
                      <li>Using Classes</li>
                      <li> live filtering</li>

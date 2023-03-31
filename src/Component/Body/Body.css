@@ -5,9 +5,11 @@
 .products-container{
     margin: 50px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: repeat(2, 1fr); */
     gap: 45px;
 }
 .cart-container{
     background-color: rgb(206, 239, 228);
+    position: sticky;
+    top: 0;
 }

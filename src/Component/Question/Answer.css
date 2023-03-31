@@ -7,3 +7,7 @@
 .question-paper{
     margin: auto;
 }
+.list{
+    list-style: none;
+    text-decoration: none;
+}

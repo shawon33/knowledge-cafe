@@ -14,19 +14,20 @@ const Product = (props) => {
         <div className='product'>
             <img src={img} alt="" />
             <div className='img'>
-               <div>
+               <div className='img-info'>
                   <img src={Author_img} alt="" />
                     <div>
                       <h3>{seller}</h3>
                     <p>{published_Date}</p>
                     </div>
                </div>
-                <p className='prag'>{Readingtime} men
-                 <FontAwesomeIcon  onClick={()=>handleCard(props.product)} icon={faBookBookmark} />
+                <p className='prag'>{Readingtime} men  
+                 <FontAwesomeIcon className='font' onClick={()=>handleCard(props.product)}   icon={faBookBookmark} />
                  </p>
             </div>
             <div>
                 <p>{name}</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, et!</p>
             </div>
             <button  onClick={()=>handleCard(props.product)}>Mark as Read</button>
         </div>
