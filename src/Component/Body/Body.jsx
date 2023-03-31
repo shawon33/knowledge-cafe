@@ -33,7 +33,6 @@ const Body = () => {
                 key={product.id}
                 product={product}
                 handleCard={handleCard}
-                
                 ></Product>)
                }
               </div>
