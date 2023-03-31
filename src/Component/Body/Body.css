@@ -13,3 +13,15 @@
     position: sticky;
     top: 0;
 }
+
+@media screen and (min-width: 480px) {
+    body {
+      background-color: lightgreen;
+    }
+    .shop-container,.products-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+  }
