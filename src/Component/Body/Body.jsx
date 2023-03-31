@@ -26,8 +26,9 @@ const Body = () => {
     }
 
     return (
-        <div className='shop-container'>
-            <div className="products-container">
+        <>
+           <div className='shop-container'>
+              <div className="products-container">
                {
                 products.map(product=><Product
                 key={product.id}
@@ -35,11 +36,13 @@ const Body = () => {
                 handleCard={handleCard}
                 ></Product>)
                }
+              </div>
+              <div className='cart-container'>
+                <Cart cart={cart}></Cart>
+              </div>
             </div>
-            <div className='cart-container'>
-              <Cart cart={cart}></Cart>
-            </div>
-        </div>
+            
+        </>
     );
 };
 
