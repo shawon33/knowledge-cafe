@@ -10,7 +10,6 @@ const Body = () => {
     const [products,setProducts] = useState([]);
     const [cart,setCart]=useState([]);
   
-    
 
     useEffect(()=>{
         fetch('data.json')
@@ -18,12 +17,12 @@ const Body = () => {
         .then(data=>setProducts(data));
     },[]);
 
-    
 
     const handleCard=(product)=>{
         const newCart=[... cart,product];
         setCart(newCart);
     }
+  
 
     return (
         <>
@@ -34,6 +33,7 @@ const Body = () => {
                 key={product.id}
                 product={product}
                 handleCard={handleCard}
+                
                 ></Product>)
                }
               </div>

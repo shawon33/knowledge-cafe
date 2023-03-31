@@ -7,7 +7,7 @@ const Product = (props) => {
     const {img,name,seller,Author_img,published_Date,Readingtime,}=props.product;
 
     const handleCard =props.handleCard;
-
+    const idCart=props.idCart;
 
 
      return (
@@ -29,7 +29,7 @@ const Product = (props) => {
                 <p>{name}</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, et!</p>
             </div>
-            <button  onClick={()=>handleCard(props.product)}>Mark as Read</button>
+            <button  onClick={()=>(props.product)}>Mark as Read</button>
         </div>
     );
 };
