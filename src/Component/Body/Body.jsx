@@ -2,10 +2,15 @@ import "./Body.css"
 import React, { useEffect, useState } from 'react';
 import '../../../public/data.json';
 import Product from "../Product/Product";
+import Cart from "../Cart/Cart";
+
 
 const Body = () => {
 
     const [products,setProducts] = useState([]);
+    const [cart,setCart]=useState([]);
+  
+    
 
     useEffect(()=>{
         fetch('data.json')
@@ -13,7 +18,12 @@ const Body = () => {
         .then(data=>setProducts(data));
     },[]);
 
+    
 
+    const handleCard=(product)=>{
+        const newCart=[... cart,product];
+        setCart(newCart);
+    }
 
     return (
         <div className='shop-container'>
@@ -22,11 +32,12 @@ const Body = () => {
                 products.map(product=><Product
                 key={product.id}
                 product={product}
+                handleCard={handleCard}
                 ></Product>)
                }
             </div>
-            <div className='cart-container'> 
-                Kabir
+            <div className='cart-container'>
+              <Cart cart={cart}></Cart>
             </div>
         </div>
     );
